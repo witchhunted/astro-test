@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'Caveat';
+  src: url('../fonts/Caveat-Regular.woff2') format('woff2'),
+       url('../fonts/Caveat-Regular.woff1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero::before {    
+    content: "";
+    background-image: url('/wpbed.jpg');
+    background-size: cover;
+    background-position:30%;
+    position: absolute;
+    top: -7px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+
+html {
+  overflow: hidden;
+  background: black;
+}
+
+body {
+  overflow: hidden;
+  background: black;
+  font-family: 'Caveat', cursive; /* Use the font-family name defined earlier */
+}
+
+.center {
+  z-index: 1;
+  position: absolute;
+  margin: 0;
+  top: 50.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.custom-icon1 {
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 47%;
+  display: inline-block;
+  transition: 0.3s ease;
+  transform: translateX(-100%);
+}
+.custom-icon1:hover {
+  box-shadow: 0 0 25px 5px rgba(220, 152, 164, 0.3); /* Adjust the values as needed */
+  border-radius: 50%; /* Makes the box-shadow circular */
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 47%;
+  display: inline-block;
+  transform: translateX(-100%);
+}
+
+.custom-icon2 {
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+.custom-icon2:hover {
+  box-shadow: 0 0 25px 5px rgba(102, 192, 244, 0.3); /* Adjust the values as needed */
+  border-radius: 50%; /* Makes the box-shadow circular */
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  display: inline-block;
+  transform: translateX(-50%);
+}
+
+.custom-icon3 {
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 53%;
+  display: inline-block;
+  transition: 0.3s ease;
+  transform: translateX(-0%);
+}
+.custom-icon3:hover {
+  box-shadow: 0 0 25px 5px rgba(220, 152, 164, 0.3); /* Adjust the values as needed */
+  border-radius: 50%; /* Makes the box-shadow circular */
+  color: #FFF;
+  position: absolute;
+  top: 56%;
+  left: 53%;
+  display: inline-block;
+  transform: translateX(-0%);
+}
+
+.glow-icon1 {
+  animation: glow1 10s ease-in-out infinite alternate; /* Adjust the animation properties as needed */
+}
+@keyframes glow1 {
+  from {
+      filter: drop-shadow(0 0 5px #fd75f2); /* Define the initial glow effect */
+  }
+  to {
+      filter: drop-shadow(0 0 10px #fd75f2); /* Define the stronger glow effect */
+  }
+}
+
+.glow-icon2 {
+  animation: glow2 10s ease-in-out infinite alternate; /* Adjust the animation properties as needed */
+}
+@keyframes glow2 {
+  from {
+      filter: drop-shadow(0 0 5px #66c0f4); /* Define the initial glow effect */
+  }
+  to {
+      filter: drop-shadow(0 0 10px #66c0f4); /* Define the stronger glow effect */
+  }
+}
+
+.music {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  left: 50%;
+  bottom: 5%; /* Adjust the distance from the bottom to place it at the center bottom */
+  transform: translateX(-50%);
+  color: #FFF;
+  text-shadow: 1px 1px 5px rgba(238, 238, 238, 0.69);
+  transition: 0.3s ease;
+}
+.music:hover {
+  box-shadow: 0 0 25px 5px rgba(102, 192, 244, 0.3); /* Adjust the values as needed */
+  border-radius: 50%; /* Makes the box-shadow circular */
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  left: 50%;
+  bottom: 5%; /* Adjust the distance from the bottom to place it at the center bottom */
+  transform: translateX(-50%);
+  color: #FFF;
+  text-shadow: 1px 1px 5px rgba(238, 238, 238, 0.69);
+}
+
+.h1 {
+  color: #FFF; /* Set the color to red (#FF0000), replace with your desired color */
+}
+
+
+h1 {
+  font-size: 100px;
+  text-shadow: 1px 1px 5px rgba(238, 238, 238, 0.69);
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  font-weight:normal;
+}
+h1:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  top: 88%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+h1:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+svg {
+  width: 33px; /* Icon width */
+  height: 33px; /* Icon height */
+}
+
+a {
+  color: #FFF;
+  display: inline-block; /* Add this line to make the <a> elements inline-block */
+  text-decoration: none; /* Remove underline from links if needed */
+}
+
+a:hover {
+  color: #FFF;
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }
+  .custom-icon1 {
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 42%;
+      display: inline-block;
+      transition: 0.3s ease;
+      transform: translateX(-100%);
+  }
+  .custom-icon1:hover {
+      box-shadow: 0 0 25px 5px rgba(220, 152, 164, 0.3); /* Adjust the values as needed */
+      border-radius: 50%; /* Makes the box-shadow circular */
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 42%;
+      display: inline-block;
+      transform: translateX(-100%);
+  }
+  
+  .custom-icon2 {
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      display: inline-block;
+      transition: 0.3s ease;
+      transform: translateX(-50%);
+  }
+  .custom-icon2:hover {
+      box-shadow: 0 0 25px 5px rgba(102, 192, 244, 0.3); /* Adjust the values as needed */
+      border-radius: 50%; /* Makes the box-shadow circular */
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 50%;
+      display: inline-block;
+      transform: translateX(-50%);
+  }
+  
+  .custom-icon3 {
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 58%;
+      display: inline-block;
+      transition: 0.3s ease;
+      transform: translateX(-0%);
+  }
+  .custom-icon3:hover {
+      box-shadow: 0 0 25px 5px rgba(220, 152, 164, 0.3); /* Adjust the values as needed */
+      border-radius: 50%; /* Makes the box-shadow circular */
+      color: #FFF;
+      position: absolute;
+      top: 56%;
+      left: 58%;
+      display: inline-block;
+      transform: translateX(-0%);
+  }
+  
+}

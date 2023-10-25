@@ -1,0 +1,26 @@
+<script>
+// Use native JavaScript to create the audio element
+var audio = new Audio("https://witchhunted.s-ul.eu/7gG34a1N");
+audio.volume = 0.1;
+
+// Get the play-pause button by its ID
+var playPauseButton = document.getElementById('play-pause-button');
+
+playPauseButton.addEventListener("click", function () {
+  if (playPauseButton.classList.contains('fa-play')) {
+    playPauseButton.classList.remove('fa-play');
+    playPauseButton.classList.add('fa-pause');
+    audio.play();
+  } else {
+    playPauseButton.classList.remove('fa-pause');
+    playPauseButton.classList.add('fa-play');
+    audio.pause();
+  }
+});
+
+audio.onended = function () {
+  playPauseButton.classList.remove('fa-pause');
+  playPauseButton.classList.add('fa-play');
+};
+
+</script>
